@@ -1,0 +1,100 @@
+@import vars
+
+@media screen and (min-width: 992px)
+    .sidebar__nav
+        &:hover
+            .sidebar__nav-item
+                opacity: .5
+                transition: all .3s
+                &.sidebar__nav-item--active a
+                    margin: 5px 0
+                    padding: 10px 15px
+
+                    background-color: rgba($theme-second-color, .5)
+                &:hover
+                    opacity: 1
+                    &.sidebar__nav-item--active a
+                        background-color: $theme-second-color
+
+@media screen and (max-width: 992px)
+    .sidebar
+        padding: 28px 24px
+
+        min-width: 96px
+        &-logo
+            margin-bottom: 47px
+        &__nav
+            ul
+                gap: 12px
+
+                display: flex
+                flex-direction: column
+            a
+                padding: 12px
+
+                font-size: 0
+                line-height: 1
+                span
+                    margin-right: 0
+    .main
+        max-width: calc(100% - 96px)
+
+@media screen and (max-width: 767px)
+    #app
+        flex-direction: column
+    .sidebar
+        padding: 15px 24px
+
+        flex-direction: row
+        justify-content: flex-end
+        align-items: center
+
+        border-bottom: solid 1px $theme-color--lighter
+        &-menu-btn
+            margin-left: -24px
+
+            display: flex
+
+            font-size: 24px
+            color: $theme-second-color
+        &-logo
+            margin: 0 auto
+        &__nav
+            display: none
+    .main
+        padding: 25px 16px 72px
+
+        max-width: 100%
+    .header__account
+        display: none
+    .table-header__actions-button
+        font-size: 0
+        &--lg
+            padding: 7px 15px
+
+            width: 39px
+            height: 39px
+        &--xs
+            display: none
+    .table
+        min-width: 120vw
+    .table__box
+        overflow-x: auto
+        &::after
+            content: ""
+        &::-webkit-scrollbar
+            width: 10px
+            height: 10px
+        &::-webkit-scrollbar-thumb
+            border-radius: 20px
+
+            background: $theme-second-color
+    .table__nav
+        align-items: center
+    .table__nav-info
+        font-size: 12px
+        line-height: 18px
+    .table__nav-actions
+        gap: 24px
+    .table__nav-actions-rows
+        font-size: 12px
